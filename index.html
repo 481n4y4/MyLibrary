@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Library</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <a class="titleWeb">Smart Library</a>
+
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#books">Books</a>
+      </nav>
+    </header>
+    <main>
+      <div class="hero" id="hero"></div>
+
+      <div id="books" class="books">
+        <div class="search">
+          <input type="text" id="nama" placeholder="Name of the Book" />
+          <button onclick="findBook()">Find</button>
+        </div>
+
+        <div class="buttons">
+          <button onclick="allBook()">All Books</button>
+          <button onclick="borrow()">Borrowed</button>
+          <button onclick="available()">Available</button>
+        </div>
+
+        <div class="daftar-buku" id="output"></div>
+      </div>
+    </main>
+    <footer>
+      <p>Created by <a href="">KheiraAbinaya</a>. | &copy; 2025.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      const books = [
+        {
+          title: "Laskar Pelangi",
+          author: "Andrea Hirata",
+          status: "Available",
+        },
+        {
+          title: "Bumi Manusia",
+          author: "Pramoedya A.T.",
+          status: "Borrow",
+        },
+        {
+          title: "Negeri 5 Menara",
+          author: "Ahmad Fuadi",
+          status: "Available",
+        },
+      ];
+
+      // forEach: tampilkan semua buku
+      let output = document.getElementById("output");
+
+      function allBook() {
+        output.innerHTML = "";
+        books.forEach((item) => {
+          output.innerHTML += `<div class="item-buku">
+        <strong>${item.title}</strong> by ${item.author}
+        <span class="status ${item.status.toLowerCase()}">${item.status}</span>
+      </div>`;
+        });
+      }
+
+      function borrow() {
+        output.innerHTML = "";
+
+        const borrowed = books.some((item) => {
+          return item.status.toLowerCase() === "borrow";
+        });
+        if (borrowed) {
+          output.innerHTML =
+            "<div class='item-buku'>Ada buku yang sedang dipinjam.</div>";
+        } else {
+          output.innerHTML =
+            "<div class='item-buku'>Semua buku tersedia.</div>";
+        }
+      }
+
+      function available() {
+        output.innerHTML = "";
+        const availab = books.every((item) => {
+          return item.status.toLowerCase() === "Available";
+        });
+
+        if (availab) {
+          output.innerHTML =
+            "<div class='item-buku'>Semua buku tersedia.</div>";
+        } else {
+          output.innerHTML =
+            "<div class='item-buku'>Ada buku yang sedang dipinjam.</div>";
+        }
+      }
+
+      function findBook() {
+        const input = document.getElementById("nama").value.trim();
+
+        const finding = books.find((item) => {
+          return item.title.toLowerCase() === input.toLowerCase();
+        });
+
+        if (finding) {
+          output.innerHTML = `<div class="item-buku">
+          ${finding.title} by ${finding.author} is ${finding.status}
+        </div>`;
+        } else {
+          output.innerHTML = `<div class="item-buku">Buku tidak ditemukan.</div>`;
+        }
+      }
+    </script>
+  </body>
+</html>

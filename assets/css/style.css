@@ -1,0 +1,176 @@
+:root {
+  --bg2: #3c3d37;
+  --font1: #fff;
+  --font2: #000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: var(--bg2);
+  color: var(--font1);
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+header .titleWeb {
+  color: var(--font1);
+  font-weight: 700;
+  
+}
+
+header nav a {
+  color: var(--font1);
+  text-decoration: none;
+  padding: 10px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  background: white;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 5px;
+  width: 45%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 8px 15px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.daftar-buku {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.item-buku {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #fafafa;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.item-buku span.status {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.item-buku .status.available {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.item-buku .status.borrow {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+footer {
+  background-color: var(--bg2);
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  color: #fff;
+}
+
+footer a {
+  color: var(--font1);
+}
+
+/* ✅ RESPONSIVE LAYOUT */
+@media (max-width: 600px) {
+  input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  .item-buku {
+    font-size: 14px;
+  }
+}
