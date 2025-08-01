@@ -1,7 +1,7 @@
 :root {
-  --bg2: #3c3d37;
-  --font1: #fff;
-  --font2: #000;
+  --bg2: #fff;
+  --font1: #000;
+  --font2: #fff;
 }
 
 * {
@@ -14,7 +14,13 @@
 body {
   min-height: 100vh;
   margin: 0;
-  background: #f4f6f9;
+  background: var(--bg2);
+}
+
+main {
+  background: var(--bg2);
+  min-height: 100vh;
+  text-align: center;
 }
 
 header {
@@ -22,12 +28,16 @@ header {
   color: var(--font1);
   display: flex;
   width: 100%;
-  height: 4rem;
-  padding: 1rem;
+  padding: 1.4rem 7%;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 header .titleWeb {
@@ -49,16 +59,28 @@ header nav a:hover {
 .hero {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
 }
 
-main {
-  background: white;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 80%, white 100%);
+  z-index: 1;
+}
+
+.books {
   min-height: 100vh;
-  text-align: center;
+  padding: 5rem 2rem;
 }
 
 input {
@@ -70,7 +92,7 @@ input {
   font-size: 16px;
 }
 
-button {
+.books button {
   padding: 10px 20px;
   margin: 10px;
   background-color: #4caf50;
@@ -80,17 +102,17 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-button:hover {
+.books button:hover {
   background-color: #45a049;
 }
 
-.buttons {
+.books .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.buttons button {
+.books .buttons button {
   padding: 8px 15px;
   margin: 5px;
   background-color: #007bff;
@@ -101,16 +123,16 @@ button:hover {
   cursor: pointer;
 }
 
-.buttons button:hover {
+.books .buttons button:hover {
   background-color: #0056b3;
 }
 
-.daftar-buku {
+.books .daftar-buku {
   margin-top: 20px;
   text-align: left;
 }
 
-.item-buku {
+.books .item-buku {
   padding: 12px;
   border-bottom: 1px solid #ccc;
   font-size: 16px;
@@ -120,19 +142,19 @@ button:hover {
   text-align: center;
 }
 
-.item-buku span.status {
+.books .item-buku span.status {
   font-weight: bold;
   padding: 2px 8px;
   border-radius: 4px;
   margin-left: 10px;
 }
 
-.item-buku .status.available {
+.books .item-buku .status.available {
   background-color: #d4edda;
   color: #155724;
 }
 
-.item-buku .status.borrow {
+.books .item-buku .status.borrow {
   background-color: #f8d7da;
   color: #721c24;
 }
@@ -142,7 +164,8 @@ footer {
   text-align: center;
   padding: 1rem 0;
   width: 100%;
-  color: #fff;
+  color: var(--font1);
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
