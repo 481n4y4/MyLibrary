@@ -1,4 +1,4 @@
-// 
+//
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector("#hamburger-menu");
 
@@ -87,3 +87,7 @@ function findBook() {
     output.innerHTML = `<div class="item-buku">Buku tidak ditemukan.</div>`;
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  allBook();
+});

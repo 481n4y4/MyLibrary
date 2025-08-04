@@ -120,7 +120,7 @@ input {
 .books button {
   padding: 10px 20px;
   margin: 10px;
-  background-color: #4caf50;
+  background-color: #9ecad6;
   color: white;
   border: none;
   border-radius: 5px;
@@ -128,7 +128,7 @@ input {
   cursor: pointer;
 }
 .books button:hover {
-  background-color: #45a049;
+  background-color: #748dae;
 }
 
 .books .buttons {
@@ -140,7 +140,7 @@ input {
 .books .buttons button {
   padding: 8px 15px;
   margin: 5px;
-  background-color: #007bff;
+  background-color: #c0c9ee;
   color: white;
   border: none;
   border-radius: 5px;
@@ -149,7 +149,7 @@ input {
 }
 
 .books .buttons button:hover {
-  background-color: #0056b3;
+  background-color: #a2aadb;
 }
 
 .books .daftar-buku {
