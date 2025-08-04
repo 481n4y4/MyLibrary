@@ -63,7 +63,7 @@ header nav a:hover {
 
 /* Hero */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,11 +87,15 @@ header nav a:hover {
 }
 
 .hero .hero-img {
-  width: 40%;
+  max-width: 400px;
 }
 
-.hero .hero-img img {
+.hero-img img {
   width: 100%;
+}
+
+.hero .hero-title {
+  text-align: center;
 }
 
 .hero .hero-title h1 {
@@ -196,10 +200,6 @@ footer a {
 
 /* ✅ RESPONSIVE LAYOUT */
 @media (max-width: 600px) {
-  html {
-    font-size: 120%;
-  }
-
   #hamburger-menu {
     display: inline-block;
   }
@@ -221,6 +221,13 @@ footer a {
 
   .hero {
     min-height: 100vh;
+    flex-direction: column; /* img di atas, title di bawah */
+    gap: 10px;
+  }
+
+  .hero .hero-img {
+    width: 70%;
+    max-width: 300px;
   }
 
   /* books */

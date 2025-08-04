@@ -1,3 +1,4 @@
+// 
 const navbarNav = document.querySelector(".navbar-nav");
 const hamburger = document.querySelector("#hamburger-menu");
 
