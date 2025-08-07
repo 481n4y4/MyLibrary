@@ -145,25 +145,24 @@ header nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: left;
 }
 
 .author-card {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-color);
-  border-radius: 12px;
-  padding: 1.5rem;
+  background-color: var(--card);
   width: 100%;
-  max-width: 300px;
-  min-height: 200px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 380px;
+  min-height: 180px;
 }
 
 .card-content {
   flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
 }
 
 .card-content h2 {
@@ -179,10 +178,12 @@ header nav a:hover {
 .card-image {
   flex-shrink: 0;
   margin-left: 1rem;
+  display: flex;
+  align-items: flex-end;
 }
 
 .card-image img {
-  max-height: 120px;
+  max-height: 150px;
   width: auto;
   object-fit: contain;
 }
