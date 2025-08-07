@@ -39,16 +39,75 @@
       </div>
     </header>
     <main>
-      <div class="hero" id="hero">
+      <!-- Hero Section Start-->
+      <section class="hero" id="hero">
         <div class="hero-img">
           <img src="assets/img/hero.png" alt="reading" />
         </div>
         <div class="hero-title">
           <h1>Hi, Welcome to Library</h1>
+          <p>
+            Reading is a window to the world, and books are the vessels that
+            carry us to places we've never been.
+          </p>
         </div>
-      </div>
+      </section>
+      <!-- Hero Section End -->
 
-      <div id="books" class="books">
+      <!-- Author Section Start -->
+      <section class="authors" id="authors">
+        <h1 class="title">Authors</h1>
+        <div class="shortcut">
+          <a href="#">Top 250 Authors</a>
+          <a href="#">Favorite Indie Authors</a>
+          <a href="#">Under 30</a>
+          <a href="#">Epic Authors</a>
+          <a href="#">Booker Prize Winners</a>
+        </div>
+
+        <div class="card-row">
+          <div class="author-card">
+            <div class="card-content">
+              <div class="content">
+                <h2>Top Authors</h2>
+                <p>Read their side of the story</p>
+              </div>
+            </div>
+            <div class="card-image">
+              <img src="assets/img/1.png" alt="Top Author" />
+            </div>
+          </div>
+
+          <div class="author-card">
+            <div class="card-content">
+              <div class="content">
+                <h2>Female Authors</h2>
+                <p>Most influential women in history</p>
+              </div>
+            </div>
+            <div class="card-image">
+              <img src="assets/img/2.png" alt="Female Author" />
+            </div>
+          </div>
+
+          <div class="author-card">
+            <div class="card-content">
+              <div class="content">
+                <h2>Greek Originals</h2>
+                <p>Learn from the masters</p>
+              </div>
+            </div>
+            <div class="card-image">
+              <img src="assets/img/3.png" alt="Greek Originals" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Author Section End -->
+
+      <!-- Books Section Start -->
+      <section id="books" class="books">
+        <h1 class="title">Book Shelf</h1>
         <div class="search">
           <input type="text" id="nama" placeholder="Name of the Book" />
           <button onclick="findBook()">
@@ -63,7 +122,8 @@
         </div>
 
         <div class="daftar-buku" id="output"></div>
-      </div>
+      </section>
+      <!-- Books Section End -->
     </main>
     <footer>
       <p>Created by <a href="">KheiraAbinaya</a>. | &copy; 2025.</p>
